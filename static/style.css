@@ -1,0 +1,16 @@
+.festival-image {
+    color: white;
+    padding: 16px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 45px;
+    margin-right: 45px;
+    margin: 0;
+    background-image: url(https://static1.squarespace.com/static/5a205c87a803bbcb2862e87a/5b608fc028bbc1881f342a02/5b60900128bbc1881f34301a/1533230800292/pemberton-music-festival-evening.jpg?format=1500w);
+    opacity: 0.2;
+}
+body {
+    background-color: red;
+}

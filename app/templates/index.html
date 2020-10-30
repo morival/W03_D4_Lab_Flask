@@ -1,0 +1,40 @@
+{% extends "base.html" %} 
+
+{% block content %}
+    
+    <h1>Event Planner</h1>  
+    <section id="festival-planner">
+        <form class="festival-image" action="/add-event" method="post">
+            <label for="date">Date</label>
+            <input type="date" name="date" id="date"></input>
+            <br>
+            <label for="name">Name of Event</label>
+            <input type="text" name="name" id="name"> 
+            <br>
+            <label for="number-of-guests">Number of Guests</label>
+            <input type="text" name="number-of-guests" id="number-of-guests">
+            <br>
+            <label for="location">Room Location</label>
+            <input type="text" name="location" id="location">
+            <br>
+            <label for="description">Description</label>
+            <input type="text" name="description" id="description">
+            <br>
+            <label for="recurrence">Recurrence</label>
+            <input type="checkbox" name="recurrence" id="recurrence">
+            <input type="submit" value="Add Event">
+            
+
+        {% for event in events %}
+            <div>
+                <p>
+                    {{event.date}} {{event.name_of_event}} {{event.number_of_guests}} {{event.room_location}} {{event.description}}
+                    {% if event.recurrence %}
+                    <span> - Recurring! &#9989;</span>
+                    {% endif %}
+                </p>
+            </div>
+        {% endfor %}
+        </form>
+    </section>
+{% endblock %}
